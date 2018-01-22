@@ -1,0 +1,2 @@
+class SnapimagesController < ApplicationController
+end

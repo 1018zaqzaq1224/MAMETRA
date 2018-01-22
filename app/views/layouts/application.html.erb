@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mametra</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+	<!-- /header -->
+	<header id="top-header">
+		<div class="social">
+			<%= link_to "What's MAMETRA", abouts_path %>
+			<%= link_to "Contact", contacts_path %>
+			<%= link_to "Twitter", "https://twitter.com/mameused" %>
+			<%= link_to "Instagram", "https://www.instagram.com/explore/locations/806413641/mametrakitchen/" %>
+		</div>
+		<%= link_to homes_path do %>
+			<%= image_tag 'mametra_logo.jpg', class: "logo" %>
+		<% end %>
+	</header>
+	<!-- /header -->
+
+    <%= yield %>
+  </body>
+</html>
+

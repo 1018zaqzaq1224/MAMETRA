@@ -1,0 +1,54 @@
+<section id="home" class="home open">
+	<p class="outline-title">MAMETRA</p>
+</section>
+<section id="used&clothing" class="used&clothing open active">
+	<h1><%=link_to "USED CLOTHING", products_path, style: "color: #fff;" %></h1>
+	<div class="section-content">
+		<div class="section-main">
+		<div class="breadcrumbs">
+			<%= link_to "HOME", homes_path %>
+			> USED CLOTHING
+		</div>
+		<div id="nav-bar">
+			<ul class="nav">
+				<%= link_to "SNAP SHOT", snaps_path, class: "genderlist" %>
+			</ul>
+		</div>
+		<div class="product-list">
+			<ul>
+				<%= @products.each do |product| %>
+					<li class="box-number">
+						<div class="product-inner">
+							<div>
+								<ul class="productimage">
+									<% @product.product_images.each do |image| %>
+										<%= attachment_image_tag image%>
+									<% end %>
+								</ul>
+							</div>
+							<div class="name">
+								<p>
+									<span><%= @product.gender %></span>
+									<%= @product.product_name %>
+								</p>
+							</div>
+							<p class="priceen">¥<%= @product.price %>+tax</p>
+						</div>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+	</div>
+	<%= paginate @products, class: "pagenate" %>
+</section>
+<section id="deli&cafe" class="deli&cafe">
+	<h1><%=link_to "DELI CAFE", delis_path %></h1>
+	<div class="section-content">
+	</div>
+</section>
+<section id="artspace" class="artspace">
+	<h1><%=link_to "ART SPACE", arts_path %></h1>
+	<div class="section-content">
+	</div>
+</section>

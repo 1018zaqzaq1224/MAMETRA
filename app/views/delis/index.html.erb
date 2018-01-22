@@ -1,0 +1,37 @@
+<section id="home" class="home open">
+	<p class="outline-title">MAMETRA</p>
+	<p class="outline-text">SEISEKISAKURAGAOKA / SINCE2000</p>
+</section>
+<section id="used&clothing" class="used&clothing open">
+	<h1><%=link_to "USED CLOTHING", products_path%></h1>
+	<div class="section-content">
+		<div class="section-main">
+		<div class="breadcrumbs">
+			<%= link_to "HOME", homes_path %>
+			> USED CLOTHING
+		</div>
+</section>
+<section id="deli&cafe" class="deli&cafe open active">
+	<h1><%=link_to "DELI CAFE", delis_path, style: "color: #fff;" %></h1>
+	<div class="section-content">
+		<div class="maincontent">
+			<div class="breadcrumbs">
+				<%= link_to "HOME", homes_path %>
+				> DELI CAFE
+			</div>
+			<h2>DELI CAFE MENU</h2>
+			<div class="left-content">
+				<h3>WEEKDAY&WEEKEND MENU</h3>
+				<%= image_tag "delimenu.jpg", style: "height:550px;" %>
+			</div>
+			<div class="right-content">
+				<h3>DAILY MENU</h3>
+				<a class="twitter-timeline" width="400px" height="600px" href="https://twitter.com/Mametraxxx?ref_src=twsrc%5Etfw">Tweets by Mametraxxx</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="artspace" class="artspace">
+	<h1><%= link_to "ART SPACE", arts_path %></h1>
+<div class="section-content"></div>
+</section>

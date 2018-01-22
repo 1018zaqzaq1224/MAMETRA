@@ -1,0 +1,2 @@
+class ArtImage < ApplicationRecord
+end
