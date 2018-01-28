@@ -1,35 +1,41 @@
 <section id="home" class="home open">
 </section>
 <section id="used&clothing" class="used&clothing open">
-	<h1><%=link_to "USED CLOTHING", products_path %></h1>
+	<%= link_to products_path do %>
+	<h1>USED CLOTHING</h1>
+	<% end %>
 	<div class="section-content">
 	</div>
 </section>
 <section id="deli&cafe" class="deli&cafe open">
-	<h1><%=link_to "DELI CAFE", delis_path %></h1>
+	<%= link_to delis_path do %>
+	<h1>DELI CAFE</h1>
+	<% end %>
 	<div class="section-content">
 	</div>
 </section>
 <section id="artspace" class="artspace open active">
-	<h1><%=link_to "ART SPACE", arts_path, style: "color: #fff;" %></h1>
+	<%= link_to arts_path, style: "color: #fff;" do %>
+	<h1>ART SPACE</h1>
+	<% end %>
 	<div class="section-content">
 		<div class="section-main">
 			<div class="breadcrumbs">
 				<%= link_to "HOME", homes_path %>
 					> ART SPACE
 			</div>
-			<%= @arts.each do |art| %>
+			<% @arts.each do |art| %>
 			<div class="art-content">
 				<div class="event-info">
 					<p class="event-period"><%= art.start_date %>~<%= art.end_date %></p>
 					<h2 class="event-name"><%= art.event_name %></h2>
 					<h3 class="artist-name"><%= art.artist_name %></h3>
-					<p class="event-text"><%= art.event_indo %></p>
+					<%= simple_format(art.event_info, :class => "event-text") %>
 				</div>
 				<div>
 					<ul class="event-photo">
-						<%= @arts.art_images.each do |image| %>
-							<%= attachment_image_tag image %>
+						<% art.art_images.each do |image| %>
+							<%= attachment_image_tag image, :image %>
 						<% end %>
 					</ul>
 				</div>

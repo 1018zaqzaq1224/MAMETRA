@@ -1,0 +1,23 @@
+<div class="section-content">
+	<div class="section-main2">
+		<% @arts.each do |art| %>
+		<div class="art-content">
+			<%= link_to "編集", edit_admin_art_path(art), class:"btn btn-primary btn-xs" %>
+			<%= link_to "削除", admin_art_path(art), method: :delete, class:"btn btn-danger btn-xs", "data-confirm" => "本当に削除しますか？" %>
+			<div class="event-info">
+				<p class="event-period"><%= art.start_date %> ~ <%= art.end_date %></p>
+				<h2 class="event-name"><%= art.event_name %></h2>
+				<h3 class="artist-name"><%= art.artist_name %></h3>
+				<%= simple_format(art.event_info, :class => "event-text") %>
+			</div>
+			<div>
+				<ul class="event-photo">
+					<% art.art_images.each do |image| %>
+						<%= attachment_image_tag image, :image %>
+					<% end %>
+				</ul>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>

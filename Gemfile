@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -39,6 +39,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -57,8 +58,30 @@ gem 'devise'
 
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 
-gem "refile-mini_magick"
+gem "refile-mini_magick", github: 'refile/refile-mini_magick'
 
 gem 'kaminari'
 
 gem "font-awesome-rails"
+
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+
+gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
+
+gem "jquery-slick-rails"
+
+gem 'momentjs-rails', '>= 2.9.0'
+
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
+
+# gem 'jquery-turbolinks'
+
+gem 'nested_form'
+
+gem 'seed-fu', '~> 2.3'
+
+gem 'kaminari-bootstrap', '~> 3.0.1'
+
+gem 'jquery-bgswitcher-rails', '~> 0.0.5'

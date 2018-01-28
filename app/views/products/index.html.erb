@@ -2,7 +2,9 @@
 	<p class="outline-title">MAMETRA</p>
 </section>
 <section id="used&clothing" class="used&clothing open active">
-	<h1><%=link_to "USED CLOTHING", products_path, style: "color: #fff;" %></h1>
+	<%= link_to products_path, style: "color: #fff;" do %>
+	<h1>USED CLOTHING</h1>
+	<% end %>
 	<div class="section-content">
 		<div class="section-main">
 		<div class="breadcrumbs">
@@ -16,23 +18,24 @@
 		</div>
 		<div class="product-list">
 			<ul>
-				<%= @products.each do |product| %>
+				<% @products.each do |product| %>
 					<li class="box-number">
 						<div class="product-inner">
 							<div>
 								<ul class="productimage">
-									<% @product.product_images.each do |image| %>
-										<%= attachment_image_tag image%>
+									<% product.product_images.each do |image| %>
+										<%= attachment_image_tag image, :image%>
 									<% end %>
 								</ul>
 							</div>
 							<div class="name">
 								<p>
-									<span><%= @product.gender %></span>
-									<%= @product.product_name %>
+									<span><%= product.gender %>(<%= product.size %>)</span>
+									<%= product.product_name %>
 								</p>
 							</div>
-							<p class="priceen">¥<%= @product.price %>+tax</p>
+							<p class="priceen">¥<%= product.price %>+tax
+							<span><%= product.statuss %></span></p>
 						</div>
 					</li>
 				<% end %>
@@ -40,15 +43,18 @@
 		</div>
 	</div>
 	</div>
-	<%= paginate @products, class: "pagenate" %>
 </section>
 <section id="deli&cafe" class="deli&cafe">
-	<h1><%=link_to "DELI CAFE", delis_path %></h1>
+	<%= link_to delis_path do %>
+	<h1>DELI CAFE</h1>
+	<% end %>
 	<div class="section-content">
 	</div>
 </section>
 <section id="artspace" class="artspace">
-	<h1><%=link_to "ART SPACE", arts_path %></h1>
+	<%= link_to arts_path do %>
+	<h1>ART SPACE</h1>
+	<% end %>
 	<div class="section-content">
 	</div>
 </section>

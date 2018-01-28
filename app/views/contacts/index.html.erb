@@ -1,6 +1,8 @@
 <%= form_for @contact, :url => contacts_confirm_path do |f| %>
   <div class="page-header">
-    <h1>お問い合わせ</h1>
+    <h1 style="margin-top: 50px; text-align: center; display: block; color: #121212; font: italic 40px '';">CONTACT</h1>
+    <p style="text-align: center; color: #121212; font: italic; line-height: 1.5; ">お洋服の買取希望、Art Spaceのご利用について、等々お気軽にお問合せください!<br>
+    ※商品の問い合わせに関しては、お電話でのお問い合わせを御願い致します</p>
   </div>
  
   <% if @contact.errors.any? %>
@@ -16,17 +18,19 @@
  
   <table class="table">
     <tr>
-      <th>名前<span class="text-danger">（必須）</span></th>
+      <th style="text-align: right;">名前<span class="text-danger">（必須）</span></th>
       <td><%= f.text_field :name %></td>
     </tr>
     <tr>
-      <th>メールアドレス<span class="text-danger">（必須）</span></th>
+      <th style="text-align: right;"">メールアドレス<span class="text-danger">（必須）</span></th>
       <td><%= f.text_field :email %></td>
     </tr>
     <tr>
-      <th>お問い合わせ内容</th>
+      <th style="text-align: right;"">お問い合わせ内容</th>
       <td><%= f.text_area :message %></td>
     </tr>
   </table>
-  <%= f.submit '確認', class: 'btn btn-primary' %>
+  <div style="text-align: center;">
+  <%= f.submit '確認', class: 'btn btn-primary', style: 'margin: 0 auto;' %>
+  </div>
   <% end %>

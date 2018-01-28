@@ -3,7 +3,9 @@
 	<p class="outline-text">SEISEKISAKURAGAOKA / SINCE2000</p>
 </section>
 <section id="used&clothing" class="used&clothing open">
-	<h1><%=link_to "USED CLOTHING", products_path%></h1>
+	<%= link_to products_path do %>
+	<h1>USED CLOTHING</h1>
+	<% end %>
 	<div class="section-content">
 		<div class="section-main">
 		<div class="breadcrumbs">
@@ -12,7 +14,9 @@
 		</div>
 </section>
 <section id="deli&cafe" class="deli&cafe open active">
-	<h1><%=link_to "DELI CAFE", delis_path, style: "color: #fff;" %></h1>
+	<%= link_to delis_path, style: "color: #fff;" do %>
+	<h1>DELI CAFE</h1>
+	<% end %>
 	<div class="section-content">
 		<div class="maincontent">
 			<div class="breadcrumbs">
@@ -32,6 +36,8 @@
 	</div>
 </section>
 <section id="artspace" class="artspace">
-	<h1><%= link_to "ART SPACE", arts_path %></h1>
+	<%= link_to arts_path do %>
+	<h1>ART SPACE</h1>
+	<% end %>
 <div class="section-content"></div>
 </section>

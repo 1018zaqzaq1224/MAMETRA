@@ -10,12 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
 //= require rails-ujs
-//= require turbolinks
+//= require jquery3
+//= require popper
+//= require bootstrap
+//= require moment
+//= require bootstrap-sprockets
+//= require jquery.slick
+//= require jquery_nested_form
 //= require_tree .
-
-$(function(){
-	$('.event-photo').slick();
-	$('.productimage').slick();
-	$('.snapshotimage').slick();
-});

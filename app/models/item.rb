@@ -1,4 +1,6 @@
 class Item < ApplicationRecord
-	has_many :genre
-	belogs_to :snap
+	belongs_to :genre
+	belongs_to :snap
+
+	validates :item_name, presence: true
 end

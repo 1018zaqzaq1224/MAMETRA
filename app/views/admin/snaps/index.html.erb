@@ -1,0 +1,32 @@
+<div class="section-content">
+	<div class="section-main2">
+		<div class="snapshot-list">
+			<ul>
+				<% @snaps.each do |snap| %>
+				<li class="box-number2">
+					<div class="snapshot-inner">
+						<div>
+							<ul class="snapshotimage">
+								<% snap.snap_images.each do |image| %>
+									<%= attachment_image_tag image, :image %>
+								<% end %>
+							</ul>
+						</div>
+						<table class="snapinfo">
+							<th class="snapname"><%= snap.snap_name %></th>
+							<% snap.items.each do |item| %>
+							<tr>
+								<td class="genre"><%= item.genre.genre_name %></td>
+								<td class="snapitem"><%= item.item_name %></td>
+							</tr>
+							<% end %>
+						</table>
+						<%= link_to "編集", edit_admin_snap_path(snap), class:"btn btn-primary btn-xs" %>
+						<%= link_to "削除", admin_snap_path(snap), method: :delete, class:"btn btn-danger btn-xs", "data-confirm" => "本当に削除しますか？" %>
+					</div>
+				</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
