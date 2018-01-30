@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mametra</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+	<!-- /header -->
+	<header id="top-header2">
+	<div class="social">
+			<%= link_to "COMMON", homes_path, :target=>["_blank"] %>
+			<%= link_to 'LOGOUT', destroy_admin_session_path, method: :delete %>
+			<div>
+				<p>USED →</p>
+				<%= link_to "New", new_admin_product_path %>
+				<%= link_to "List", admin_products_path %>
+			</div>
+			<div>
+				<p>SNAP →</p>
+				<%= link_to "New", new_admin_snap_path %>
+				<%= link_to "List", admin_snaps_path %>
+			</div>
+			<div>
+				<p>ART →</p>
+				<%= link_to "New", new_admin_art_path %>
+				<%= link_to "List", admin_arts_path %>
+			</div>
+	</div>
+		<%= link_to admin_homes_path do %>
+			<%= image_tag 'mametra_logo.jpg', class: "logo" %>
+		<% end %>
+	</header>
+	<!-- /header -->
+
+    <%= yield %>
+  </body>
+</html>

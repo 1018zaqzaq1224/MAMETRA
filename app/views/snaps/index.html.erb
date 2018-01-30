@@ -1,7 +1,9 @@
 <section id="home" class="home open">
 </section>
 <section id="used&clothing" class="used&clothing open active">
-	<h1><%=link_to "USED CLOTHING", products_path, style: "color: #fff;" %></h1>
+	<%= link_to products_path, style: "color: #fff;" do %>
+	<h1>USED CLOTHING</h1>
+	<% end %>
 	<div class="section-content">
 		<div class="section-main">
 			<div class="breadcrumbs">
@@ -17,22 +19,24 @@
 			</div>
 			<div class="snapshot-list">
 				<ul>
-					<%= @snaps.each do |snap| %>
+					<% @snaps.each do |snap| %>
 						<li class="box-number">
 							<div class="snapshot-inner">
 								<div>
 									<ul class="snapshotimage">
-									<% @snap.snap_images.each do |image| %>
-										<%= attachment_image_tag image%>
+									<% snap.snap_images.each do |image| %>
+										<%= attachment_image_tag image, :image%>
 									<% end %>
 									</ul>
 								</div>
 								<table class="snapinfo">
-									<th class="snapname"><%= @snap.snap_name %></th>
-									<tr>
-										<td class="genre"><%= @genre.genre_name %></td>
-										<td class="snapitem"><%= @snap.snap_item %></td>
-									</tr>
+									<th class="snapname"><%= snap.snap_name %></th>
+									<% snap.items.each do |item| %>
+										<tr>
+											<td class="genre"><%= item.genre.genre_name %></td>
+											<td class="snapitem"><%= item.item_name %></td>
+										</tr>
+									<% end %>
 								</table>
 							</div>
 						</li>
@@ -43,12 +47,16 @@
 	</div>
 </section>
 <section id="deli&cafe" class="deli&cafe">
-<h1><%=link_to "DELI CAFE", delis_path %></h1>
+<%= link_to delis_path do %>
+	<h1>DELI CAFE</h1>
+	<% end %>
 <div class="section-content">
 </div>
 </section>
 <section id="artspace" class="artspace">
-	<h1><%=link_to "ART SPACE", arts_path %></h1>
+	<%= link_to arts_path do %>
+	<h1>ART SPACE</h1>
+	<% end %>
 	<div class="section-content">
 	</div>
 </section>

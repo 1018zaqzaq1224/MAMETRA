@@ -4,8 +4,8 @@
     <title>Mametra</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
@@ -13,9 +13,8 @@
 	<header id="top-header">
 		<div class="social">
 			<%= link_to "What's MAMETRA", abouts_path %>
-			<%= link_to "Contact", contacts_path %>
-			<%= link_to "Twitter", "https://twitter.com/mameused" %>
-			<%= link_to "Instagram", "https://www.instagram.com/explore/locations/806413641/mametrakitchen/" %>
+			<%= link_to "Twitter", "https://twitter.com/mameused", :target=>["_blank"] %>
+			<%= link_to "Instagram", "https://www.instagram.com/explore/locations/806413641/mametrakitchen/", :target=>["_blank"] %>
 		</div>
 		<%= link_to homes_path do %>
 			<%= image_tag 'mametra_logo.jpg', class: "logo" %>
