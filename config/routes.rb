@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :products, :only => [:index, :new, :edit, :create, :update, :destroy] do
       patch :toggle_statuss
     end
+    get 'products/:gender' => 'products#show', as: 'products_show'
 
     resources :arts, :only => [:index, :new, :edit, :create, :update, :destroy]
 
@@ -29,6 +30,7 @@ Rails.application.routes.draw do
   resources :abouts, :only => [:index]
 
   resources :products, :only => [:index]
+  get 'products/:gender' => 'products#show', as: 'products_show'
 
   resources :snaps, :only => [:index]
 

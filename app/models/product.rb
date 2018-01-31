@@ -4,6 +4,10 @@ class Product < ApplicationRecord
 
 	enum statuss: { 販売中: 0, SOLDOUT: 1 }
 
+	scope :get_by_gender, ->(gender) {
+	where(gender: gender)
+	}
+
 	validates :product_name, presence: true
 	validates :price, presence: true
 	validates :gender, presence: true
