@@ -6,14 +6,10 @@
 	<% end %>
 	<div class="section-content">
 		<div class="section-main">
-			<div class="breadcrumbs">
-			<%= link_to "HOME", homes_path %>
-			>
-			<%= link_to "USED CLOTHING", products_path %>
-			> SNAP SHOT
-			</div>
+			<h2>SNAP SHOT</h2>
 			<div id="nav-bar">
 				<ul class="nav">
+				<%= link_to "USED CLOTHING", products_path, class: "genderlist" %>
 				<%= link_to "SNAP SHOT", snaps_path, class: "genderlist" %>
 				</ul>
 			</div>

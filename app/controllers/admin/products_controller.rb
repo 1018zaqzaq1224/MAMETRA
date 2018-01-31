@@ -6,6 +6,12 @@ class Admin::ProductsController < ApplicationController
 
 	def index
 		@products = Product.all.reverse_order
+		@gender = Product.where('gender = ?', params[:gender])
+	end
+
+	def show
+		@products = Product.where('gender = ?', params[:gender]).reverse_order
+		@gender = Product.where('gender = ?', params[:gender])
 	end
 
 	def update
