@@ -91,7 +91,7 @@ header a {display: block;}
 .social a {
 	display: inline-block;
 	font-family: Courier, monospace !important;
-	font-size: 14px;
+	font-size: 20px;
 	margin-right: 30px;
 }
 .social a i {
@@ -414,10 +414,10 @@ section.active h1 {
 	margin-top: 20px;
 	margin-bottom: 10px;
 	color: #121212;
-	font: italic 15px Courier;
+	font: italic 25px Courier;
 }
 .event-period {
-	font-size: 12px;
+	font-size: 20px;
 	font: italic Courier;
 	margin-top: 20px;
 	color: #121212;
@@ -432,7 +432,7 @@ section.active h1 {
 .event-text {
 	margin-top: 10px;
 	line-height: 1.5;
-	font: italic 14px Courier;
+	font: italic 16px Courier;
 	color: #121212;
 	padding-bottom: 20px;
 	text-align: center;
@@ -533,12 +533,12 @@ section.active h1 {
 
 
 .snapshot-list .box-number {
-	width: 420px;
+	width: 465px;
 	float: left;
-	margin-top: 28px;
-	height: 600px;
-	margin-right: 90px;
-	margin-left: 90px;
+	padding-top: 45px;
+	height: 650px;
+	padding-right: 45px;
+	margin: 0;
 }
 .snapshot-inner {
 }
@@ -587,7 +587,7 @@ section.active h1 {
 .social div p {
 	display: inline-block;
 	font-family: Courier, monospace !important;
-	font-size: 14px;
+	font-size: 17px;
 	color: #121212;
 	margin-right: 30px;
 }
@@ -601,12 +601,12 @@ section.active h1 {
 }
 .admin-art, .admin-clothing {
 	float: left;
-	width: 35%;
+	width: 50%;
 	text-align: center;
 }
 .admin-snap {
 	float: left;
-	width: 30%;
+	width: 50%;
 	text-align: center;
 }
 
@@ -618,6 +618,9 @@ section.active h1 {
 }
 .admin-art img, .admin-clothing img, .admin-snap img {
 	height: 300px;
+}
+.admin-snap ul li a, .admin-art ul li a {
+	font-size: 24px;
 }
 
 .section-main2 {
@@ -645,6 +648,7 @@ section.active h1 {
 	margin-top: 28px;
 	height: 600px;
 	margin-left: 50px;
+	margin-bottom: 30px;
 }
 
 #top-header2 {
@@ -726,4 +730,15 @@ form {
 }
 .button:hover {
   background: #ee3e52;
+}
+
+
+
+
+.section-sec {
+	width: 500px;
+	float: left;
+}
+.section-sec img {
+	width: 400px;
 }

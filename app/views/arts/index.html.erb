@@ -1,8 +1,8 @@
 <section id="home" class="home open">
 </section>
 <section id="used&clothing" class="used&clothing open">
-	<%= link_to products_path do %>
-	<h1>USED CLOTHING</h1>
+	<%= link_to snaps_path do %>
+	<h1>SNAP SHOT</h1>
 	<% end %>
 	<div class="section-content">
 	</div>
@@ -24,9 +24,9 @@
 			<% @arts.each do |art| %>
 			<div class="art-content">
 				<div class="event-info">
-					<p class="event-period"><%= art.start_date %>~<%= art.end_date %></p>
+					<p class="event-period">期間：<%= art.start_date %>~<%= art.end_date %></p>
 					<h2 class="event-name"><%= art.event_name %></h2>
-					<h3 class="artist-name"><%= art.artist_name %></h3>
+					<h3 class="artist-name">Artist "<%= art.artist_name %>"</h3>
 					<%= simple_format(art.event_info, :class => "event-text") %>
 				</div>
 				<div>

@@ -6,6 +6,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+	<meta property="og:title" content="Mametra" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="ページの簡単な説明" />
+	<meta property="og:url" content="ページのURL" />
+	<meta property="og:site_name" content="サイトのタイトル" />
+	<meta property="og:image" content="サムネイル画像のURL" />
   </head>
 
   <body>
@@ -13,10 +19,11 @@
 	<header id="top-header">
 		<div class="social">
 			<%= link_to "What's MAMETRA", abouts_path %>
+			<%= link_to "ONLINE STORE", "http://mametra.shop-pro.jp/?mode=srh&cid=&keyword=", :target=>["_blank"] %>
 			<%= link_to "Twitter", "https://twitter.com/mameused", :target=>["_blank"] %>
 			<%= link_to "Instagram", "https://www.instagram.com/explore/locations/806413641/mametrakitchen/", :target=>["_blank"] %>
 		</div>
-		<%= link_to homes_path do %>
+		<%= link_to root_path do %>
 			<%= image_tag 'mametra_logo.jpg', class: "logo" %>
 		<% end %>
 	</header>

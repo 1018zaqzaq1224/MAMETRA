@@ -1,26 +1,18 @@
 <div class="admin-top">
-	<div class="admin-clothing">
-		<h2>USED CLOTHING</h2>
-		<ul>
-			<li><%= link_to "New", new_admin_product_path %></li>
-			<li><%= link_to "List", admin_products_path %></li>
-		</ul>
-		<%= image_tag "used_clothing.jpg" %>
-	</div>
 	<div class="admin-snap">
 		<h2>SNAP SHOT</h2>
-		<ul>
-			<li><%= link_to "New", new_admin_snap_path %></li>
-			<li><%= link_to "List", admin_snaps_path %></li>
-		</ul>
 		<%= image_tag "snap_shot.jpg" %>
+		<ul>
+			<li><%= link_to "→New", new_admin_snap_path %></li>
+			<li><%= link_to "→List", admin_snaps_path %></li>
+		</ul>
 	</div>
 	<div class="admin-art">
 		<h2>ART SPACE</h2>
-		<ul>
-			<li><%= link_to "New", new_admin_art_path %></li>
-			<li><%= link_to "List", admin_arts_path %></li>
-		</ul>
 		<%= image_tag "art_space.jpg" %>
+		<ul>
+			<li><%= link_to "→New", new_admin_art_path %></li>
+			<li><%= link_to "→List", admin_arts_path %></li>
+		</ul>
 	</div>
 </div>

@@ -64,8 +64,8 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 20px;
-    width: 20px;
+    height: 50px;
+    width: 50px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
@@ -91,7 +91,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
     &:before {
         font-family: $slick-font-family;
-        font-size: 20px;
+        font-size: 50px;
         line-height: 1;
         color: #121212;
         opacity: $slick-opacity-default;
@@ -104,7 +104,7 @@ $slick-opacity-not-active: 0.25 !default;
     z-index: 100;
     [dir="rtl"] & {
         left: auto;
-        right: -25px;
+        right: -55px;
     }
     &:before {
         content: $slick-prev-character;
