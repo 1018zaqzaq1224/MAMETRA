@@ -1,18 +1,12 @@
 <section id="home" class="home open">
 </section>
 <section id="used&clothing" class="used&clothing open active">
-	<%= link_to products_path, style: "color: #fff;" do %>
-	<h1>USED CLOTHING</h1>
+	<%= link_to snaps_path, style: "color: #fff;" do %>
+	<h1>SNAP SHOT</h1>
 	<% end %>
 	<div class="section-content">
 		<div class="section-main">
 			<h2>SNAP SHOT</h2>
-			<div id="nav-bar">
-				<ul class="nav">
-				<%= link_to "USED CLOTHING", products_path, class: "genderlist" %>
-				<%= link_to "SNAP SHOT", snaps_path, class: "genderlist" %>
-				</ul>
-			</div>
 			<div class="snapshot-list">
 				<ul>
 					<% @snaps.each do |snap| %>
