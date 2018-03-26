@@ -3,7 +3,15 @@
 	<div class="col-sm-10">
 		<div>
 		<%= f.fields_for :items do |b| %>
-			<%= render partial: "admin/snaps/item_form", locals: {f: b } %>
+			<%#= render partial: "admin/snaps/item_form", locals: {f: b } %>
+			<div>
+			<%= b.collection_select :genre_id, @genres, :id, :genre_name, {}, {:class => "form-control genre-area", :style =>"width: 200px; display: inline-block; margin: 5px 0 0 30px;"} %>
+			<%= b.text_field :item_name, id: "InputText", class: "form-control input-sm itemname", style:"width: 400px; display: inline-block; margin: 5px 0 0 5px;", placeholder:"Item Name" %>
+			<%= b.hidden_field :id %>
+
+		<%= link_to_remove_field("Delete", b, {}) %>
+</div>
+
 			<div>
 		<% end %>
 		<%= link_to_add_field("Add Item", f, :items, {}) %>
