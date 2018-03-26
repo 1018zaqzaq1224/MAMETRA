@@ -8,7 +8,7 @@
 						<div>
 							<ul class="snapshotimage">
 								<% snap.snap_images.each do |image| %>
-									<%= attachment_image_tag image, :image %>
+									<%= attachment_image_tag image, :image, :fill, 420, 421 %>
 								<% end %>
 							</ul>
 						</div>

@@ -1,4 +1,5 @@
 class Snap < ApplicationRecord
+        attr_accessor :genre_id, :item_name
 	has_many :snap_images, dependent: :destroy
 	has_many :items, dependent: :destroy
 	accepts_attachments_for :snap_images, attachment: :image

@@ -13,7 +13,7 @@
 			<div>
 				<ul class="event-photo">
 					<% art.art_images.each do |image| %>
-						<%= attachment_image_tag image, :image %>
+						<%= attachment_image_tag image, :image, :fill, 600, 420 %>
 					<% end %>
 				</ul>
 			</div>
