@@ -22,7 +22,8 @@ class Admin::SnapsController < ApplicationController
 	def new
 		@snap = Snap.new
 		@snap.snap_images.build
-		@item = @snap.items.build
+		@snap.items.build
+		#@item = @snap.items.build
 		@genres = Genre.all
 	end
 
