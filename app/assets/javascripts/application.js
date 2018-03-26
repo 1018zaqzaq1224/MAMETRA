@@ -13,11 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require rails-ujs
-//= require jquery3
 //= require popper
 //= require bootstrap
 //= require moment
 //= require bootstrap-sprockets
 //= require jquery.slick
-//= require jquery_nested_form
 //= require_tree .
+//= require jquery_nested_form

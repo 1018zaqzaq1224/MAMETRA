@@ -1,4 +1,4 @@
 class SnapImage < ApplicationRecord
-	belongs_to :snap
+	belongs_to :snap, optional: true
 	attachment :image
 end
