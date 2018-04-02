@@ -2,7 +2,7 @@ class Admin::SnapsController < ApplicationController
 
 	layout 'application.html 2'
 	before_action :authenticate_admin!
-	before_action :params_snap, only:[:index, :update,  :edit, :destroy]
+	before_action :params_snap, only:[:index, :update, :create, :edit, :destroy]
 
 	def index
 		@snaps = Snap.all.reverse_order
@@ -21,15 +21,14 @@ class Admin::SnapsController < ApplicationController
 
 	def new
 		@snap = Snap.new
+                @snap.items.build
 		@snap.snap_images.build
-		@snap.items.build
-		#@item = @snap.items.build
-		@genres = Genre.all
 	end
 
 	def create
 		@snap = Snap.new(snap_params)
 		@snap.snap_images.build
+		@snap.items.build
 		if @snap.save
 			redirect_to admin_snaps_path
 		else

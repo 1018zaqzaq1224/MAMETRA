@@ -1,9 +1,9 @@
 class Snap < ApplicationRecord
-        attr_accessor :genre_id, :item_name
+	 attr_accessor :genre_id
+	 attr_accessor :item_name
+	has_many :items, inverse_of: :snap, dependent: :destroy
+        accepts_nested_attributes_for :items, allow_destroy: true
 	has_many :snap_images, dependent: :destroy
-	has_many :items, dependent: :destroy
 	accepts_attachments_for :snap_images, attachment: :image
-	accepts_nested_attributes_for :items, allow_destroy: true
 
-	validates :snap_name, presence: true
 end

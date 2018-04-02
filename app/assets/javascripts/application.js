@@ -19,4 +19,4 @@
 //= require bootstrap-sprockets
 //= require jquery.slick
 //= require_tree .
-//= require jquery_nested_form
+

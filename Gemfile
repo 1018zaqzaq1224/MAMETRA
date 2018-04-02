@@ -78,7 +78,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
 # gem 'jquery-turbolinks'
 
-gem 'nested_form'
+# gem 'nested_form'
 
 gem 'seed-fu', '~> 2.3'
 
@@ -86,5 +86,5 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 
 gem 'jquery-bgswitcher-rails', '~> 0.0.5'
 gem 'json'
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.20'
 gem 'listen', '>= 3.0.5', '< 3.2'
