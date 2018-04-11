@@ -56,13 +56,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
-gem "refile", require: "refile/rails", github: 'manfe/refile'
-
+# gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile",github: 'refile/refile', require: "refile/rails"
 gem "refile-mini_magick", github: 'refile/refile-mini_magick'
 
 gem 'kaminari'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 
@@ -70,7 +70,7 @@ gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
 
-gem "jquery-slick-rails"
+gem 'jquery-slick-rails'
 
 gem 'momentjs-rails', '>= 2.9.0'
 

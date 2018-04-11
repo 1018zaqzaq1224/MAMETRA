@@ -1,16 +1,12 @@
 <div class="form-group">
 	<label class="col-sm-2 control-label" for="InputText">Snap Item</label>
 	<div class="col-sm-10">
-		<div>
 		<%= f.fields_for :items do |b| %>
-                        <%#= render partial: "admin/snaps/item_form", locals: {b: b } %>
-			 <%= f.collection_select :genre_id, Genre.all, :id, :genre_name, {}, {:class => "form-control genre-area", :style =>"width: 200px; display: inline-block; margin: 5px 0 0 30px;"} %>
-       			 <%= f.text_field :item_name, id: "InputText", class: "form-control input-sm itemname", style:"width: 400px; display: inline-block; margin: 5px 0 0 5px;", placeholder:"Item Name" %>
-       			 <%= f.hidden_field :id %>
-                <% end %>
-	
+			<%= b.collection_select :genre_id, Genre.all, :id, :genre_name, {}, {:class => "form-control genre-area", :style =>"width: 200px; display: inline-block; margin: 5px 0 0 30px;"} %>
+			<%= b.text_field :item_name, id: "InputText", class: "form-control input-sm itemname", style:"width: 400px; display: inline-block; margin: 5px 0 0 5px;", placeholder:"Item Name" %>
+			<%= b.hidden_field :id %>
+		<% end %></br>
 		<%= link_to_add_field("Add Item", f, :items, {}) %>
-		</div>
 	</div>
 </div>
 

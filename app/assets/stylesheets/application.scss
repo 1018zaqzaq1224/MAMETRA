@@ -301,8 +301,7 @@ section.active h1 {
 	height: calc(100vh - 70px);
 }
 .section-main {
-	float: left;
-	padding-left: 40px;
+	padding: 0 10px;
 	margin-top: 3px;
 }
 .section-main h2 {
@@ -546,32 +545,32 @@ section.active h1 {
 
 
 .snapshot-list .box-number {
-	width: 465px;
+	width: 415px;
 	float: left;
 	padding-top: 45px;
-	height: 650px;
-	padding-right: 45px;
+	height: 620px;
+	padding-right: 20px;
 	margin: 0;
 }
 .snapshot-inner {
 }
 .snapshotimage {
-	width: 420px;
+	width: 390px;
 	overflow: hidden;
 	margin-bottom: 10px;
 }
 .snapshotimage img {
-	width: 420px;
-	height: 421px;
+	width: 390px;
+	height: 391px;
 	margin: 0 auto;
 }
 
 .snapname {
 	margin-bottom: 5px;
-	width: 420px;
+	width: 390px;
 	word-wrap: break-word;
 	display: inline-block;
-	max-width: 420px;
+	max-width: 390px;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	font-family: Courier, monospace !important;
@@ -582,14 +581,14 @@ section.active h1 {
 
 .genre {
 	text-align: center;
-	width: 200px;
+	width: 180px;
 	float: left;
 	color: #000;
 	line-height: 1.5;
 }
 .snapitem {
 	text-align: center;
-	width: 200px;
+	width: 180px;
 	float: right;
 	color: #000;
 	line-height: 1.5;
@@ -637,7 +636,7 @@ section.active h1 {
 }
 
 .section-main2 {
-	float: left;
+	padding: 0 40px;
 }
 
 .product-list .box-number2 {
@@ -656,7 +655,7 @@ section.active h1 {
 }
 
 .snapshot-list .box-number2 {
-	width: 420px;
+	width: 390px;
 	float: left;
 	margin-top: 28px;
 	height: 600px;

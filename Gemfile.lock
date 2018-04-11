@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/manfe/refile.git
-  revision: 46b4178654e60bb5846b1423acf6d0740cdecc25
-  specs:
-    refile (0.6.2)
-      mime-types
-      rest-client (~> 2)
-      sinatra (~> 2.0.0.beta2)
-
-GIT
   remote: https://github.com/refile/refile-mini_magick.git
   revision: 9c740eb81e6b7f6c0270d54f42bf5ce3f0305de0
   specs:
@@ -15,6 +6,15 @@ GIT
       image_processing (~> 0.10)
       mini_magick (~> 4.0)
       refile (~> 0.6)
+
+GIT
+  remote: https://github.com/refile/refile.git
+  revision: 47778bdfceb81dc34f348a050232e7ab70a85e44
+  specs:
+    refile (0.6.2)
+      mime-types
+      rest-client (>= 1.8, < 3.0)
+      sinatra (>= 2.0.0, <= 3.0.0)
 
 GEM
   remote: https://rubygems.org/

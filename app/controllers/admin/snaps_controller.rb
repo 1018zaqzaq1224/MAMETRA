@@ -27,8 +27,7 @@ class Admin::SnapsController < ApplicationController
 
 	def create
 		@snap = Snap.new(snap_params)
-		@snap.snap_images.build
-		@snap.items.build
+
 		if @snap.save
 			redirect_to admin_snaps_path
 		else
