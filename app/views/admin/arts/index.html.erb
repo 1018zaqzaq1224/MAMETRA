@@ -2,7 +2,7 @@
 	<div class="section-main2">
 		<% @arts.each do |art| %>
 		<div class="art-content">
-			<%= link_to "編集", edit_admin_art_path(art), class:"btn btn-primary btn-xs" %>
+			<%#= link_to "編集", edit_admin_art_path(art), class:"btn btn-primary btn-xs" %>
 			<%= link_to "削除", admin_art_path(art), method: :delete, class:"btn btn-danger btn-xs", "data-confirm" => "本当に削除しますか？" %>
 			<div class="event-info">
 				<p class="event-period"><%= art.start_date %> ~ <%= art.end_date %></p>

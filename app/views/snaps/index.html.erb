@@ -23,7 +23,7 @@
 									<th class="snapname"><%= snap.snap_name %></th>
 									<% snap.items.each do |item| %>
 										<tr>
-											<td class="genre"><%= item.genre.genre_name %></td>
+											<td class="genre"><%= item.genre.try(:genre_name) %></td>
 											<td class="snapitem"><%= item.item_name %></td>
 										</tr>
 									<% end %>

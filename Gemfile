@@ -56,13 +56,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
-gem "refile", require: "refile/rails", github: 'manfe/refile'
-
+# gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile",github: 'refile/refile', require: "refile/rails"
 gem "refile-mini_magick", github: 'refile/refile-mini_magick'
 
 gem 'kaminari'
 
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 
@@ -70,7 +70,7 @@ gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
 
-gem "jquery-slick-rails"
+gem 'jquery-slick-rails'
 
 gem 'momentjs-rails', '>= 2.9.0'
 
@@ -78,7 +78,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
 # gem 'jquery-turbolinks'
 
-gem 'nested_form'
+# gem 'nested_form'
 
 gem 'seed-fu', '~> 2.3'
 
@@ -86,5 +86,5 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 
 gem 'jquery-bgswitcher-rails', '~> 0.0.5'
 gem 'json'
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.20'
 gem 'listen', '>= 3.0.5', '< 3.2'

@@ -25,7 +25,6 @@ class Admin::ArtsController < ApplicationController
 
 	def create
 		@art = Art.new(art_params)
-		@art.art_images.build
 		if @art.save
 			redirect_to admin_arts_path
 		else
